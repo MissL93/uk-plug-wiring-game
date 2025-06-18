@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UK Plug Wiring Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Wire the UK Plug</h1>
+  <div class="plug-board">
+    <div class="terminal" id="live">Live</div>
+    <div class="terminal" id="neutral">Neutral</div>
+    <div class="terminal" id="earth">Earth</div>
+  </div>
+  <div class="wires">
+    <div class="wire" draggable="true" id="wire-live" data-target="live">Brown Wire (Live)</div>
+    <div class="wire" draggable="true" id="wire-neutral" data-target="neutral">Blue Wire (Neutral)</div>
+    <div class="wire" draggable="true" id="wire-earth" data-target="earth">Green/Yellow Wire (Earth)</div>
+  </div>
+  <button onclick="checkWiring()">Check Wiring</button>
+  <div id="result"></div>
+
+  <div class="quiz">
+    <h2>Quick Quiz</h2>
+    <p>Which color wire goes to the Earth terminal?</p>
+    <form id="quiz-form">
+      <label><input type="radio" name="q1" value="brown"/> Brown</label><br/>
+      <label><input type="radio" name="q1" value="blue"/> Blue</label><br/>
+      <label><input type="radio" name="q1" value="green"/> Green/Yellow</label><br/>
+      <button type="submit">Submit Answer</button>
+    </form>
+    <div id="quiz-result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
